@@ -2,6 +2,10 @@ import XCTest
 @testable import SwiftExtensions
 
 final class StringProtocolExtensionsTests: XCTestCase {
+  func testFirstLetterUppercased() {
+    XCTAssertEqual("hello world".firstLetterUppercased(), "Hello world")
+  }
+  
   func testCamelCaseToSpaceSeparated() {
     XCTAssertEqual("camelCase".camelCaseToSpaceSeparated(), "camel Case")
     XCTAssertEqual("CamelCase".camelCaseToSpaceSeparated(), "Camel Case")

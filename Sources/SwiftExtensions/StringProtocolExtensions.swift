@@ -1,6 +1,10 @@
 import Foundation
 
 public extension StringProtocol {
+  func firstLetterUppercased() -> String {
+    return prefix(1).uppercased() + dropFirst()
+  }
+  
   func camelCaseToSpaceSeparated() -> String {
     self.unicodeScalars.reduce(String()) { currentResult, scalar in
       if let lastScalar = currentResult.unicodeScalars.last {
