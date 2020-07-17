@@ -38,12 +38,19 @@ public extension Color {
     return Color(UIColor.quaternaryLabel)
     #endif
   }
+  
+  static var systemBackground: Color {
+    #if os(macOS)
+    return Color(NSColor.windowBackgroundColor)
+    #else
+    return Color(UIColor.systemBackground)
+    #endif
+  }
 }
 
 #if !os(macOS)
 @available(iOS 13, macCatalyst 13, tvOS 13, watchOS 6, *)
 public extension Color {
-  static let systemBackground = Color(UIColor.systemBackground)
   static let secondarySystemBackground = Color(UIColor.secondarySystemBackground)
   static let tertiarySystemBackground = Color(UIColor.tertiarySystemBackground)
   
