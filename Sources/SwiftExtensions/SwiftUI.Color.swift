@@ -7,23 +7,7 @@ import UIKit
 
 @available(iOS 13, macOS 10.15, macCatalyst 13, tvOS 13, watchOS 6, *)
 public extension Color {
-  static var label: Color {
-    #if os(macOS)
-    return Color(NSColor.labelColor)
-    #else
-    return Color(UIColor.label)
-    #endif
-  }
-  
-  static var secondaryLabel: Color {
-    #if os(macOS)
-    return Color(NSColor.secondaryLabelColor)
-    #else
-    return Color(UIColor.secondaryLabel)
-    #endif
-  }
-  
-  static var tertiaryLabel: Color {
+  static var tertiary: Color {
     #if os(macOS)
     return Color(NSColor.tertiaryLabelColor)
     #else
@@ -31,7 +15,7 @@ public extension Color {
     #endif
   }
   
-  static var quaternaryLabel: Color {
+  static var quaternary: Color {
     #if os(macOS)
     return Color(NSColor.quaternaryLabelColor)
     #else
