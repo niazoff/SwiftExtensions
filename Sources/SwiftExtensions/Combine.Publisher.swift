@@ -1,4 +1,6 @@
+#if canImport(Combine)
 import Combine
+#endif
 
 @available(iOS 13, macOS 10.15, macCatalyst 13, tvOS 13, watchOS 6, *)
 public extension Publisher where Failure == Never {
