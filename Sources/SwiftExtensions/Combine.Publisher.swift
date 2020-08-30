@@ -1,6 +1,5 @@
 #if canImport(Combine)
 import Combine
-#endif
 
 @available(iOS 13, macOS 10.15, macCatalyst 13, tvOS 13, watchOS 6, *)
 public extension Publisher where Failure == Never {
@@ -8,3 +7,4 @@ public extension Publisher where Failure == Never {
     sink { [weak object] in object?[keyPath: keyPath] = $0 }
   }
 }
+#endif

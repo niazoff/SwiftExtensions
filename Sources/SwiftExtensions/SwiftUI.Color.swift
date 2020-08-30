@@ -1,6 +1,5 @@
 #if canImport(SwiftUI)
 import SwiftUI
-#endif
 #if os(macOS)
 import AppKit
 #else
@@ -43,4 +42,5 @@ public extension Color {
   static let darkText = Color(UIColor.darkText)
   static let lightText = Color(UIColor.lightText)
 }
+#endif
 #endif
