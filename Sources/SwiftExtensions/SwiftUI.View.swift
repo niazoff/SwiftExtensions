@@ -10,4 +10,8 @@ public extension View {
       self
     }
   }
+  
+  func transform<Content: View>(@ViewBuilder transform: (Self) -> Content) -> some View {
+    transform(self)
+  }
 }
