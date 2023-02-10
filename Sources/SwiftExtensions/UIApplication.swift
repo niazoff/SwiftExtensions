@@ -1,7 +1,7 @@
 #if os(iOS)
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
   static var keyWindow: UIWindow? {
     shared.connectedScenes
       .filter { $0.activationState == .foregroundActive }
