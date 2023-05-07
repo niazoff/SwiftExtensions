@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension Color {
+public extension Color {
   init(_ hex: UInt32, opacity: Double = 1) {
     let red = Double((hex & 0xff0000) >> 16)/255
     let green = Double((hex & 0xff00) >> 8)/255
