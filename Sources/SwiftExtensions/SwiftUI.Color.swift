@@ -1,5 +1,14 @@
 import SwiftUI
 
+extension Color {
+  init(_ hex: UInt32, opacity: Double = 1) {
+    let red = Double((hex & 0xff0000) >> 16)/255
+    let green = Double((hex & 0xff00) >> 8)/255
+    let blue = Double((hex & 0xff) >> 0)/255
+    self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
+  }
+}
+
 #if os(macOS)
 import AppKit
 
